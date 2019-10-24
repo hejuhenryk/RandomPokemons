@@ -2,15 +2,15 @@
 
 A fun project to show my coding skills on the beginning of my programming career.
  
-After years of programing not related jobs i decided to get back to coding.
+After years of programing not related jobs i decided to get back to coding. :fire:
  
 While working full time kindergarten job I learned some Html, CSS and JavaScript.
 In addition I learn React library with focus on newest feachers.
  
 In this project I am going to use : 
--React with Redux
--Firebase as simple backend 
--Pokemon API - https://pokeapi.co/
+- React with Redux
+- Firebase as simple backend 
+- Pokemon API - https://pokeapi.co/
 
 ## 
 

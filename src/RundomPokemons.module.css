@@ -1,5 +1,13 @@
 .RundomPokemons {
-  background-color: #d3b3e3;
+  position: absolute;
+  background-color: #e7e7e7;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+}
+
+.Results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 5rem;
 }

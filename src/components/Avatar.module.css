@@ -1,0 +1,11 @@
+.Avatar {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    display: block;
+    background-size: cover;
+    border: 1px solid #6B527A;
+    color: #6B527A;
+    margin: 2rem auto 1rem;
+    padding: 0;
+}

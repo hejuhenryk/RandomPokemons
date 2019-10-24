@@ -1,0 +1,24 @@
+.Header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #7c7c7c54;
+    background-color: #e7e7e7;
+    z-index: 100;
+    width: 100%;
+    box-shadow: #000000 0px 5px 20px -10px;
+    overflow: hidden;
+}
+
+.Header > div {
+    max-height: 3rem;
+}
+
+p {
+    font-size: 1.2rem;
+    font: 400 1.2rem Arial;
+    cursor: pointer;
+}

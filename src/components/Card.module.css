@@ -1,0 +1,58 @@
+.Card {
+    position: relative;
+    width: 28vw;
+    /* max-width: 30vw; */
+    height: 20rem;
+    min-width: 12rem;
+    border: 2px solid #d6b9e7;
+    box-shadow: 3px 3px #ae8bc254;
+    margin: 2rem 1rem;
+}
+
+.Info {
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    text-transform: capitalize;
+}
+
+.Card button, 
+.Selected button {
+    background-color: #fd5151c4;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+
+
+.Selected {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    position: relative;
+    width: 60%;
+    max-width: 90vw;
+    /* height: 20rem; */
+    /* min-width: 20rem; */
+    border: 2px solid #d6b9e7;
+    box-shadow: 3px 3px #ae8bc254;
+    margin: 2rem 1rem;
+    padding: 1rem 2rem;
+}
+
+.Selected p {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+@media ( min-width: 500px) {
+    .Selected {
+        flex-flow: row;
+    }
+}
