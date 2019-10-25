@@ -12,13 +12,14 @@ export const Card = ({ removePokemon, isLoading, isError, data, choosed, ...prop
   } else if ( isError ) {
     avatar = <p>Erroo</p>
   } else if ( !isLoading && !isError && data ) {
+    console.log(data)
     avatar = <Avatar url={data.sprites.front_default} isLoading={isLoading}/>
     info = <div className={style.Info}>{data.name}</div>
   }
 
 
   return (
-    <div className={style.Card} onClick={isLoading ? ()=>{} : choosed}>
+    <div className={style.Card} onClick={isLoading || isError ? ()=>{} : choosed}>
       <Fragment >
         <button style={{zIndex: 10}} onClick={removePokemon}>X</button>
         <div  style={{ cursor: "pointer" }}>
@@ -31,13 +32,13 @@ export const Card = ({ removePokemon, isLoading, isError, data, choosed, ...prop
 };
 
 
-export const Selected = (props) => {
+export const Selected = ({data, removePokemon, ...props}) => {
   
-  const pokemon = props.selected;
+  const pokemon = data;
   return (
       <div className={style.Selected}>
         <div>
-          <button style={{zIndex: 10}} onClick={props.remove}>X</button>
+          <button style={{zIndex: 10}} onClick={removePokemon}>X</button>
           <Avatar url={pokemon.sprites.front_default} />
           <p style={{textTransform: 'capitalize'}}>{pokemon.name}</p>
         </div>
@@ -46,7 +47,7 @@ export const Selected = (props) => {
           <p>Pokedex nr: #{pokemon.id} </p>
           <p>Special abilities:</p>
           <ul>
-            {pokemon.abilities.map( (a, i) => <li key={i}>{a.ability.name}</li>)}  
+            {pokemon.abilities.map( (abi, indx) => <li key={indx}>{abi.ability.name}</li>)}  
           </ul>
 
         </div>

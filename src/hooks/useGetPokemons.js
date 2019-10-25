@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useState, useCallback } from 'react'
+import { useReducer, useEffect, useCallback } from 'react'
 import axios from 'axios'
 
 const reducer = (state, action) => {
@@ -29,13 +29,14 @@ export const useGetPokemons = (amount) => {
 
 
 
-    const addPokemon = () => dispatch({type:'ADD_POKEMON', id: getRndUnicPokemon(pokemonsData), data: null})
+    // const addPokemon = () => dispatch({type:'ADD_POKEMON', id: getRndUnicPokemon(pokemonsData), data: null})
 
     const removePokemon = id => dispatch({type: 'REMOVE_POKEMON', id: id})
 
 useEffect(() => {
     if( Object.keys(pokemonsData).length < amount ) {
-        addPokemon()
+        // addPokemon()
+        dispatch({type:'ADD_POKEMON', id: getRndUnicPokemon(pokemonsData), data: null})
     } else {
         for (const id in pokemonsData) {
             if (!pokemonsData[id].data) {
@@ -49,7 +50,7 @@ useEffect(() => {
             }
         }
     }
-}, [pokemonsData])
+}, [pokemonsData, amount, getRndUnicPokemon])
     
     
     // const [url, setUrl] = useState(initialUrl)

@@ -9,7 +9,7 @@ const Logo = ({isLoading, click}) => {
     }
     return (
         <div className={className.join(' ')} onClick={click}>
-            <img src={logo} />
+            <img src={logo} alt='Pokemon ball'/>
         </div>
     )
 }
